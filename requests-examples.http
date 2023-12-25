@@ -1,0 +1,90 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8000
+
+# создание пользователя
+POST {{baseUrl}}/users/
+Content-Type: application/json
+
+{
+  "name": "Onotole",
+  "mail": "777@mail.ru",
+  "password" : "qwerty",
+}
+
+###
+
+# получение пользователей
+GET {{baseUrl}}/users/
+Content-Type: application/json
+
+###
+
+# обновление пользователя
+PATCH {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "name": "Onotole",
+  "mail": "777@mail.ru",
+  "password" : "qwerty",
+  "new_password" : "ololo"
+}
+
+###
+# удаление пользователя
+DELETE {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "password" : "ololo"
+}
+
+
+
+###
+# создание объявления
+POST {{baseUrl}}/adv/
+Content-Type: application/json
+
+{
+  "owner": "Onotole",
+  "mail": "777@mail.ru",
+  "password": "ololo",
+  "title": "111ololo",
+  "description": "Svoboda ravenstvo upya4ka!"
+}
+
+
+###
+# обновление объявления
+PATCH {{baseUrl}}/adv/1
+Content-Type: application/json
+
+{
+  "owner": "Onotole",
+  "mail": "777@mail.ru",
+  "password": "ololo",
+  "title": "Achtung!",
+  "description": "Otake!111"
+}
+
+
+###
+# удаление объявления
+DELETE {{baseUrl}}/adv/1
+Content-Type: application/json
+
+{
+  "owner": "Onotole",
+  "mail": "777@mail.ru",
+  "password": "qwerty"
+}
+
+
+###
+# получение объявлений
+GET {{baseUrl}}/adv/
+Content-Type: application/json
+
+###
